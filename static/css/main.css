@@ -1,0 +1,280 @@
+*{margin: 0;padding: 0;list-style: none;}
+/*
+KISSY CSS Reset
+理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+特色：1. 适应中文；2. 基于最新主流浏览器。
+维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
+ */
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
+
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* 清除浮动 */
+.ks-clear:after, .clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ks-clear, .clear {
+  *zoom: 1;
+}
+
+.post-content pre {
+  position: relative;
+}
+.post-content code.has-numbering {
+  margin-left: 20px;
+  word-wrap: normal;
+  word-break: keep-all;
+  white-space: pre;
+}
+.post-content ul.pre-numbering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  padding: 0.5em 0.2em 0.5em 0;
+  border-right: 1px solid #c3ccd0;
+  border-radius: 3px 0 0 3px;
+  background-color: #eee;
+  text-align: right;
+  font-size: 1em;
+  color: #aaa;
+  list-style: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+a,
+a:visited,
+a:link,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-button:end:decrement,
+::-webkit-scrollbar-button:start:increment {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0,0,0,0.15);
+}
+::-webkit-scrollbar-button:start {
+  width: 10px;
+  height: 10px;
+  background: url("../img/scrollbar_arrow.png") no-repeat 0 0;
+}
+::-webkit-scrollbar-button:start:hover {
+  background: url("../img/scrollbar_arrow.png") no-repeat -15px 0;
+}
+::-webkit-scrollbar-button:start:active {
+  background: url("../img/scrollbar_arrow.png") no-repeat -30px 0;
+}
+::-webkit-scrollbar-button:end {
+  width: 10px;
+  height: 10px;
+  background: url("../img/scrollbar_arrow.png") no-repeat 0 -18px;
+}
+::-webkit-scrollbar-button:end:hover {
+  background: url("../img/scrollbar_arrow.png") no-repeat -15px -18px;
+}
+::-webkit-scrollbar-button:end:active {
+  background: url("../img/scrollbar_arrow.png") no-repeat -30px -18px;
+}
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+html,
+body {
+  height: 100%;
+}
+.yc-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: url("../img/1.jpg") repeat 0 0;
+  color: #fff;
+}
+.floor {
+  width: 750px;
+  margin: 0 auto 50px;
+  overflow-x: hidden;
+}
+nav {
+  margin: 50px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+nav ul {
+  margin-bottom: 10px;
+  float: right;
+}
+nav ul li {
+  float: left;
+  margin-left: 20px;
+}
+nav li a {
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+nav li a:hover,
+nav li a:active {
+  color: #9254de;
+  transition: all 0.3s;
+}
+section,
+footer {
+  margin-top: 50px;
+}
+#page {
+  text-align: center;
+}
+#page .page-number,
+#page .extend {
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-width: 32px;
+  height: 32px;
+  line-height: 30px;
+  text-align: center;
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  margin-right: 8px;
+  font-family: Arial;
+  outline: 0;
+}
+#page .page-number -webkit-user-select none -moz-user-select none -ms-user-select none,
+#page .extend -webkit-user-select none -moz-user-select none -ms-user-select none {
+  user-select: none;
+}
+#page .page-number:focus,
+#page .page-number:hover,
+#page .extend:focus,
+#page .extend:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-color: #1890ff;
+}
+#page .page-number.current,
+#page .extend.current {
+  border-color: #1890ff;
+  font-weight: 500;
+  color: #1890ff;
+}
+#page.mini .page-number,
+#page.mini .extend {
+  min-width: 24px;
+  height: 24px;
+  line-height: 22px;
+}
+article.post {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #262626;
+}
+article.post .post-title {
+  font-size: 20px;
+  height: 36px;
+  line-height: 36px;
+}
+article.post .post-title .title {
+  color: #9254de;
+}
+article.post .post-title a {
+  color: #9254de;
+}
+article.post .post-title .post-time {
+  color: #262626;
+  float: right;
+  font-size: 14px;
+}
+article.post .post-content {
+  color: #262626;
+  font-size: 14px;
+}
+@media (max-width: 750px) {
+  .pre-numbering {
+    display: none;
+  }
+  .has-numbering {
+    margin-left: -10px !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+  }
+}
