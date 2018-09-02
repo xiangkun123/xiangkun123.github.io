@@ -12,16 +12,4 @@
         <tag>博客</tag>
       </tags>
   </entry>
-  <entry>
-    <title><![CDATA[home]]></title>
-    <url>%2FHexo%E6%95%99%E7%A8%8B%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post123456789.ks-clear:after, .clear:after &#123; content: '\20'; display: block; height: 0; clear: both;&#125;.ks-clear, .clear &#123; *zoom: 1;&#125; More info: Writing Run server1$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites12345$ hexo deploy$ hexo deploy$ hexo deploy$ hexo deploy$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>Hexo教程</category>
-      </categories>
-      <tags>
-        <tag>旅游</tag>
-        <tag>读书</tag>
-      </tags>
-  </entry>
 </search>
