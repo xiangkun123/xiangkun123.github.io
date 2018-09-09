@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-09T21:43:28+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-09T21:47:04+08:00">
                 2018-09-09
               </time>
             
@@ -423,37 +423,38 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="/./a出现在各个位置上的次数.png" rel="gallery_cjluwxbhj0000r89uyjszc64t"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/./a出现在各个位置上的次数.png" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
         
-          
-            <h2 id="1-写一个方法将一个数组随机打乱"><a href="#1-写一个方法将一个数组随机打乱" class="headerlink" title="(1) 写一个方法将一个数组随机打乱"></a>(1) 写一个方法将一个数组随机打乱</h2><blockquote>
+          <h2 id="1-写一个方法将一个数组随机打乱"><a href="#1-写一个方法将一个数组随机打乱" class="headerlink" title="(1) 写一个方法将一个数组随机打乱"></a>(1) 写一个方法将一个数组随机打乱</h2><blockquote>
 <p> 例如： arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]，通过一个方法 randFun = func(arr)，返回一个新的数组 newArr = [2, 1, 4, 3, 5, 6, 7, 10, 8, 9]。</p>
 </blockquote>
 <h3 id="方法一：sort排序法（最简单的打乱数组顺序的方法）"><a href="#方法一：sort排序法（最简单的打乱数组顺序的方法）" class="headerlink" title="方法一：sort排序法（最简单的打乱数组顺序的方法）"></a>方法一：sort排序法（最简单的打乱数组顺序的方法）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">利用sort用法：arr.sort(compareFunction) </span><br><span class="line">如果 compareFunction(a,b) 返回的值大于 0 ，则 b 在 a 的前边； </span><br><span class="line">如果 compareFunction(a,b) 返回的值等于 0 ，则a 、b 位置保持不变； </span><br><span class="line">如果 compareFunction(a,b) 返回的值小于 0 ，则 a 在 b 的前边。</span><br></pre></td></tr></table></figure>
 <p>常见写法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// ES5:</span><br><span class="line">let arr = [1, 2, 3, 4, 5];</span><br><span class="line">function randFun(arr) &#123;</span><br><span class="line">    arr.sort(function () &#123;</span><br><span class="line">        return Math.random() - 0.5;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">let newArr = randFun(arr);</span><br><span class="line"></span><br><span class="line">// ES6：</span><br><span class="line">let arr = [1, 2, 3, 4, 5];</span><br><span class="line">let newArr = arr =&gt; arr.sort(() =&gt; Math.random() - 0.5);</span><br><span class="line"></span><br><span class="line">// 引申：</span><br><span class="line">let arr = [1, 2, 3, 4, 5];</span><br><span class="line">let newArr = arr =&gt; arr.sort(() =&gt; Math.random() - Math.random());</span><br></pre></td></tr></table></figure></p>
 <p>但是这种方法有个弊端，它并不能真正地随机打乱数组。</p>
-<h3 id="弊端"><a href="#弊端" class="headerlink" title="弊端"></a>弊端</h3><p>看下面的代码，我们生成一个长度为 10 的数组[‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’]，使用上面的方法将数组乱序，执行多次后，会发现每个元素仍然有很大机率在它原来的位置附近出现。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">let n = 10000;</span><br><span class="line"></span><br><span class="line">// 创建一个储存计算结果的数组</span><br><span class="line">let count = (new Array(10)).fill(0);</span><br><span class="line"></span><br><span class="line">// 计算 a 出现在每个位置上的次数</span><br><span class="line">for (let i = 0; i &lt; n; i ++) &#123;</span><br><span class="line">    let arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;, &apos;f&apos;, &apos;g&apos;, &apos;h&apos;, &apos;i&apos;, &apos;j&apos;];</span><br><span class="line">    arr.sort(() =&gt; Math.random() - 0.5);</span><br><span class="line">    count[arr.indexOf(&apos;a&apos;)]++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(count);</span><br></pre></td></tr></table></figure>
-<p>输出[ 2891, 2928, 1927, 1125, 579, 270, 151, 76, 34, 19 ]（带有一定随机性，每次结果都不同，但大致分布应该一致），即进行 10000 次排序后，字母’a’（数组中的第一个元素）有约 2891 次出现在第一个位置、2928 次出现在第二个位置，与之对应的只有 19 次出现在最后一个位置。如果把这个分布绘制成图像，会是下面这样：</p>
-<p><img src="./a出现在各个位置上的次数.png" alt="a出现在各个位置上的次数" title="a出现在各个位置上的次数"></p>
-<p>类似地，我们可以算出字母’f’（数组中的第六个元素）在各个位置出现的分布为[ 312, 294, 579, 1012, 1781, 2232, 1758, 1129, 586, 317 ]，图像如下：</p>
-<p><img src="./f出现在各个位置上的次数.png" alt="f出现在各个位置上的次数" title="f出现在各个位置上的次数"></p>
-<p>如果排序真的是随机的，那么每个元素在每个位置出现的概率都应该一样，实验结果各个位置的数字应该很接近，而不应像现在这样明显地集中在原来位置附近。因此，可以认为，使用形如arr.sort(() =&gt; Math.random() - 0.5)这样的方法得到的并不是真正的随机排序。</p>
-<h3 id="方法二：循环随机位交换法"><a href="#方法二：循环随机位交换法" class="headerlink" title="方法二：循环随机位交换法"></a>方法二：循环随机位交换法</h3><blockquote>
-<p>原理：循环遍历该数组，在每次遍历中产生一个(0 ~ length - 1)之间的随机下标的数，该数代表本次循环要随机交换的位置。<br>将本次循环当前位置的数和随机位置的数进行交换。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 2, 3, 4, 5];</span><br><span class="line">function randFun(arr) &#123;</span><br><span class="line">    for(let i=0, len = arr.length; i &lt; len; i++) &#123;</span><br><span class="line">        let index = parseInt(Math.random() * (len - 1));</span><br><span class="line">        let tempValue = arr[i];</span><br><span class="line">        arr[i] = arr[index];</span><br><span class="line">        arr[index] = tempValue;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line">let newArr = randFun(arr);</span><br></pre></td></tr></table></figure>
-<h3 id="方法三：Fisher–Yates-洗牌算法"><a href="#方法三：Fisher–Yates-洗牌算法" class="headerlink" title="方法三：Fisher–Yates 洗牌算法"></a>方法三：Fisher–Yates 洗牌算法</h3><blockquote>
-<p>和方法二类似</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">ES6：</span><br><span class="line"></span><br><span class="line">function shuffle(arr) &#123;</span><br><span class="line">    let i = arr.length;</span><br><span class="line">    while (i) &#123;</span><br><span class="line">        let j = Math.floor(Math.random() * i--);</span><br><span class="line">        [arr[j], arr[i]] = [arr[i], arr[j]];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ES5:</span><br><span class="line">function shuffle(arr) &#123;</span><br><span class="line">  var i = arr.length, t, j;</span><br><span class="line">  while (i) &#123;</span><br><span class="line">    j = Math.floor(Math.random() * i--);</span><br><span class="line">    t = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = t;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ul>
-<li>如果是循环内容次数比较少的时候，可以取巧地使用方法一，写法比较简单，容易记忆；</li>
-<li>如果是在循环次数较多的情况下，使用方法一不好，可以选择使用方法二或者方法三。</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/算法题库/calculation/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
