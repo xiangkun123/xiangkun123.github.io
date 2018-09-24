@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://yoursite.com/博客/hexo+github搭建个人博客/ssh-test.png">
 <meta property="og:image" content="http://yoursite.com/博客/hexo+github搭建个人博客/ssh-warning.png">
 <meta property="og:image" content="http://yoursite.com/博客/hexo+github搭建个人博客/ssh-key.png">
-<meta property="og:updated_time" content="2018-09-02T13:27:17.434Z">
+<meta property="og:updated_time" content="2018-09-24T14:49:08.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github搭建个人博客">
 <meta name="twitter:description" content="简单了解GitHub Page 是什么Github Page是面向用户、组织和项目开放的公共静态页面搭建托管服务，站点可以被免费托管在Github上 Hexo是什么你可以将你的静态页面直接放在Github Page上，也可以用Hexo或者Jekyll等博客框架自动生成站点。  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用">
@@ -376,8 +376,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-02T21:27:17+08:00">
-                2018-09-02
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-24T22:49:08+08:00">
+                2018-09-24
               </time>
             
           </span>
@@ -522,6 +522,14 @@
 <p>接着，在 github 上打开刚才创建的目录，等待几分钟就能发现代码已经上传后，这时就可以打开你的网站站点 <code>https://username.github.io/</code> 查看到页面。</p>
 <h3 id="之后重新部署三步"><a href="#之后重新部署三步" class="headerlink" title="之后重新部署三步"></a>之后重新部署三步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <h3 id="搭建完成"><a href="#搭建完成" class="headerlink" title="搭建完成"></a>搭建完成</h3><p>至此，独立博客就算搭建完成。</p>
+<h3 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h3><blockquote>
+<p>hexo new [layout] &lt;title&gt;</p>
+</blockquote>
+<p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。更多可查看官网。</p>
+<h3 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h3><blockquote>
+<p>hexo server –debug (或者 hexo s –debug)</p>
+</blockquote>
+<p>然后就可以打开本地地址 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 调试编写的文章了。</p>
 
       
     </div>
@@ -643,7 +651,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -654,7 +662,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -665,7 +673,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -714,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单了解"><span class="nav-number">1.</span> <span class="nav-text">简单了解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Page-是什么"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub Page 是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo是什么"><span class="nav-number">1.2.</span> <span class="nav-text">Hexo是什么</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前提"><span class="nav-number">2.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">3.</span> <span class="nav-text">Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成静态文件"><span class="nav-number">3.2.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务器"><span class="nav-number">3.3.</span> <span class="nav-text">启动服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">3.4.</span> <span class="nav-text">目录结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Page-配置"><span class="nav-number">4.</span> <span class="nav-text">Github Page 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Github-仓库"><span class="nav-number">4.1.</span> <span class="nav-text">创建 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立关联"><span class="nav-number">4.2.</span> <span class="nav-text">建立关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这里简单介绍一下如何配置-ssh（选择-https-的可跳过）"><span class="nav-number">4.3.</span> <span class="nav-text">这里简单介绍一下如何配置 ssh（选择 https 的可跳过）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">4.4.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#之后重新部署三步"><span class="nav-number">4.5.</span> <span class="nav-text">之后重新部署三步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建完成"><span class="nav-number">4.6.</span> <span class="nav-text">搭建完成</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单了解"><span class="nav-number">1.</span> <span class="nav-text">简单了解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Page-是什么"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub Page 是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo是什么"><span class="nav-number">1.2.</span> <span class="nav-text">Hexo是什么</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前提"><span class="nav-number">2.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">3.</span> <span class="nav-text">Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成静态文件"><span class="nav-number">3.2.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务器"><span class="nav-number">3.3.</span> <span class="nav-text">启动服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">3.4.</span> <span class="nav-text">目录结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Page-配置"><span class="nav-number">4.</span> <span class="nav-text">Github Page 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Github-仓库"><span class="nav-number">4.1.</span> <span class="nav-text">创建 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立关联"><span class="nav-number">4.2.</span> <span class="nav-text">建立关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这里简单介绍一下如何配置-ssh（选择-https-的可跳过）"><span class="nav-number">4.3.</span> <span class="nav-text">这里简单介绍一下如何配置 ssh（选择 https 的可跳过）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">4.4.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#之后重新部署三步"><span class="nav-number">4.5.</span> <span class="nav-text">之后重新部署三步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建完成"><span class="nav-number">4.6.</span> <span class="nav-text">搭建完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一篇文章"><span class="nav-number">4.7.</span> <span class="nav-text">新建一篇文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地调试"><span class="nav-number">4.8.</span> <span class="nav-text">本地调试</span></a></li></ol></li></ol></div>
             
 
           </div>
